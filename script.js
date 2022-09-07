@@ -10,6 +10,9 @@ const components = {
     },
     get activity() {
         return random(this.activitys);
+    },
+    randomMessage() {
+        console.log(`${this.greeting} ${this.compliment}. Let's go ${this.activity}.`);
     }
 }
 
@@ -17,3 +20,5 @@ const random = arr => {
     const item = arr[Math.floor(Math.random()*arr.length)];
     return item;
 }
+
+components.randomMessage()
