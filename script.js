@@ -1,3 +1,4 @@
+// Random message components object.
 const components = {
     greetings: ['Hello', 'Heyy', 'Eyup', 'Hiya', 'Hi', 'Sup', 'Wazzup'],
     compliments: ['beautiful', 'gorgeous', 'babe', 'babey', 'pretty thang', 'you absolute specimen', 'fitty'],
@@ -16,9 +17,32 @@ const components = {
     }
 }
 
+// Return random element from array passed in. 
 const random = arr => {
     const item = arr[Math.floor(Math.random()*arr.length)];
     return item;
 }
 
-components.randomMessage()
+// Node command line interface.
+const readline = require("readline");
+
+const rl = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+});
+
+const question = () =>
+  rl.question("Generate a date night plan message (Y/N)", answer => {
+    if (answer.toUpperCase() === "Y") {
+        components.randomMessage()
+        question();
+    } else if (answer.toUpperCase() === "N") {
+        console.log('Goodbye!');
+        rl.close();
+    } else {
+        console.log('Invalid input!');
+        question();
+    }
+  });
+
+question();
