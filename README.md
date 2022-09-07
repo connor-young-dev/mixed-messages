@@ -14,7 +14,8 @@ The purpose of this project was to develop my javascript and git/github skills .
 - Follow prompt instructions to get random message or close the program.
 
 ## Technologies used
-- Javascript to write the script
-- Node js terminal environment to run the program
-- Node readline to command line interface
-- Math inbuilt javascript library to randomise the messages
+- Javascript to write the script.
+- Node js terminal environment to run the program.
+- Node readline for the command line interface.
+- Math inbuilt javascript library to randomise the messages.
+- Markdown to write this lovely README file :)
